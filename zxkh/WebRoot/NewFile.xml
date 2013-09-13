@@ -1,0 +1,11 @@
+<DATAINFO>
+	<USERLIST operation="2" writeevent="0">
+		<USERID datatype="0" state="5">0000001202</USERID>
+	</USERLIST>
+	<USERLIST operation="2" writeevent="0">
+		<USERID datatype="0" state="5">0000001203</USERID>
+	</USERLIST>
+	<USERLIST operation="2" writeevent="0">
+		<USERID datatype="0" state="5">0000001204</USERID>
+	</USERLIST>
+</DATAINFO>

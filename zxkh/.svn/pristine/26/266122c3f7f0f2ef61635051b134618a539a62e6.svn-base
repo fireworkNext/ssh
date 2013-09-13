@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="业务" DIC_SPELL="yw" DIC_ASPELL="yewu"/>
+  <row DIC_CODE="02" DIC_TEXT="技术" DIC_SPELL="js" DIC_ASPELL="jishu"/>
+</data>

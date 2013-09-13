@@ -1,0 +1,35 @@
+#DataSource=ptbank_ds
+#WebLogic WebSphere
+#JdbcType=1   装载WebLogic、WebSphere等应用服务器的数据源
+#JdbcType=2   oracle数据库链接
+#JdbcType=3   Ms Sql 数据库链接
+#JdbcType=4   MySql 数据库链接
+AppSerName=WebLogic
+JdbcType=2
+
+drivers=oracle.jdbc.driver.OracleDriver
+efs.url=jdbc:oracle:thin:@127.0.0.1:1521:ptpost
+efs.user=efs
+efs.password=efs
+efs.maxconn=5
+
+#drivers=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#efs.url=jdbc:sqlserver://192.168.1.200:1433;DatabaseName=efsbase
+#efs.url=jdbc:sqlserver://GZJ\\MYDB;DatabaseName=efsbase
+#efs.user=sa
+#efs.password=a123
+#efs.maxconn=2
+
+#drivers=com.mysql.jdbc.Driver
+#efs.url=jdbc:mysql://localhost:3306/efsbase
+#efs.user=root
+#efs.password=a
+#efs.maxconn=2
+
+#maxActive=100
+#maxIdle=30
+#maxWait=10000
+#url=jdbc:oracle:thin:@127.0.0.1:1521:ptpost
+#username=efs
+#password=efs
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications xmlns="http://www.wabacus.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wabacus.com ../xsd/wabacus.applications.xsd">
+	<page id="salarylist1">
+		<report id="report1" title="薪酬数据列表" dataexport="richexcel|plainexcel|word|pdf" type="crosslist" pagesize="10" scrollstyle="image" scrollheight="500px" scrollwidth="1000px">
+			<display>
+				<col column="{sequence:1}" label="序号"></col>
+				<col column="tpl" label="薪酬类别"></col>
+				<col column="fldname" realvalue="dbfld" dataset="select fldname,dbfld,fldwidth from v_unit_tpl where dwbm='53AA0000' and tpl='wagedetailtpl' order by fldord"></col>
+			</display>
+			<sql>
+				<value>
+					<![CDATA[SELECT tpl,[#dynamic-columns#] FROM T_SALARY_DETAIL where dwbm='5355AA00']]>
+				</value>
+			</sql>
+			<format>
+				<value>
+						  <![CDATA[
+								if(mDynamicColData!=null&&mDynamicColData.size()>0)
+								{//查询到了统计数据，对它进行格式化
+									//String sex=(String)mDynamicColData.get("sex");
+									//if("1".equals(sex)) sex="男";
+									//else if("0".equals(sex)) sex="女";
+									//else if(sex==null) sex="";
+									//mDynamicColData.put("sex",sex);
+									//String birthday=(String)mDynamicColData.get("birthday");
+									//if(birthday==null) birthday="";
+									//int idx=birthday.indexOf(" ");//判断是否有时间，有的话就去掉时间，只显示日期
+									//if(idx>0) birthday=birthday.substring(0,idx);
+									//mDynamicColData.put("birthday",birthday);
+								}
+							]]>
+				</value>
+			</format>
+		</report>
+	</page>
+</applications>

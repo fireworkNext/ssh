@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="wagedetailtpl" DIC_TEXT="工资" DIC_SPELL="gz" DIC_ASPELL="gongzi"/>
+  <row DIC_CODE="prizedetailtpl" DIC_TEXT="月奖" DIC_SPELL="yj" DIC_ASPELL="yuejiang"/>
+  <row DIC_CODE="yeardetailtpl" DIC_TEXT="年终奖" DIC_SPELL="nzj" DIC_ASPELL="nianzhongjiang"/>
+  <row DIC_CODE="otherdetailtpl" DIC_TEXT="其他" DIC_SPELL="qt" DIC_ASPELL="qita"/>
+</data>

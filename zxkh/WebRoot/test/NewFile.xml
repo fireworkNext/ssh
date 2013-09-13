@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EFSFRAME efsframae="urn=www-efsframe-cn" version="1.0">
+	<QUERYINFO totalpages="1" records="9">
+		<ROW>
+			<ID>1</ID>
+			<KHID>20130904000034</KHID>
+			<XM>test</XM>
+			<XB>男</XB>
+			<CSNY sv="20130910">2013-09-10 00:00:00.0</CSNY>
+			<LXDH>4444</LXDH>
+			<SFZHM>3333</SFZHM>
+			<XJZD>4444</XJZD>
+			<ZY>44</ZY>
+			<ZW>444</ZW>
+			<YSR>4444</YSR>
+			<SXCP>444</SXCP>
+			<GRPH>444</GRPH>
+			<JRCPSYQK>100|201|301|306|401|409|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>5555台风是</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>2</ID>
+			<KHID>20130904000035</KHID>
+			<XM>333</XM>
+			<XB>33</XB>
+			<CSNY sv="20130904">2013-09-04 00:00:00.0</CSNY>
+			<LXDH>33</LXDH>
+			<SFZHM>鹅鹅鹅</SFZHM>
+			<XJZD>fdfasfdsfd</XJZD>
+			<ZY>ee</ZY>
+			<ZW>鹅鹅鹅</ZW>
+			<YSR>得到的</YSR>
+			<SXCP></SXCP>
+			<GRPH></GRPH>
+			<JRCPSYQK>101|202|302|401|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY> fewfewfqfewfdsaf</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>3</ID>
+			<KHID>20130904000036</KHID>
+			<XM>ww</XM>
+			<XB>ee</XB>
+			<CSNY></CSNY>
+			<LXDH>ee</LXDH>
+			<SFZHM>ee</SFZHM>
+			<XJZD></XJZD>
+			<ZY></ZY>
+			<ZW></ZW>
+			<YSR></YSR>
+			<SXCP></SXCP>
+			<GRPH>ee</GRPH>
+			<JRCPSYQK>102|203|302|401|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>eeee</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>4</ID>
+			<KHID>20130904000037</KHID>
+			<XM>dd</XM>
+			<XB>dd</XB>
+			<CSNY sv="20130910">2013-09-10 00:00:00.0</CSNY>
+			<LXDH>222</LXDH>
+			<SFZHM>dd</SFZHM>
+			<XJZD></XJZD>
+			<ZY></ZY>
+			<ZW></ZW>
+			<YSR></YSR>
+			<SXCP></SXCP>
+			<GRPH></GRPH>
+			<JRCPSYQK>101|202|302|403|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>dfdfsasf</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>5</ID>
+			<KHID>20130904000038</KHID>
+			<XM>33</XM>
+			<XB>333</XB>
+			<CSNY sv="20130917">2013-09-17 00:00:00.0</CSNY>
+			<LXDH>33</LXDH>
+			<SFZHM>33</SFZHM>
+			<XJZD>33</XJZD>
+			<ZY>33</ZY>
+			<ZW>333</ZW>
+			<YSR>33</YSR>
+			<SXCP>33</SXCP>
+			<GRPH>33</GRPH>
+			<JRCPSYQK>102|203|303|404|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>33333</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>6</ID>
+			<KHID>20130904000039</KHID>
+			<XM>333</XM>
+			<XB>333</XB>
+			<CSNY sv="20130924">2013-09-24 00:00:00.0</CSNY>
+			<LXDH>3</LXDH>
+			<SFZHM>33</SFZHM>
+			<XJZD></XJZD>
+			<ZY></ZY>
+			<ZW></ZW>
+			<YSR></YSR>
+			<SXCP></SXCP>
+			<GRPH></GRPH>
+			<JRCPSYQK>102|203|303|404|102|203|303|404|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>33333</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>7</ID>
+			<KHID>20130904000042</KHID>
+			<XM>dd</XM>
+			<XB>dd</XB>
+			<CSNY></CSNY>
+			<LXDH>eee</LXDH>
+			<SFZHM>eee</SFZHM>
+			<XJZD></XJZD>
+			<ZY></ZY>
+			<ZW></ZW>
+			<YSR></YSR>
+			<SXCP>ee</SXCP>
+			<GRPH>ee</GRPH>
+			<JRCPSYQK>104|303|404|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>eeeeee</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>8</ID>
+			<KHID>20130904000043</KHID>
+			<XM>李晓林</XM>
+			<XB>女</XB>
+			<CSNY sv="19790904">1979-09-04 00:00:00.0</CSNY>
+			<LXDH>2323</LXDH>
+			<SFZHM>3344343434</SFZHM>
+			<XJZD>莆田市城厢区南门路100号</XJZD>
+			<ZY>432432</ZY>
+			<ZW>432432</ZW>
+			<YSR>32432432</YSR>
+			<SXCP>432432</SXCP>
+			<GRPH>232343</GRPH>
+			<JRCPSYQK>104|303|404|100|201|302|401|407|</JRCPSYQK>
+			<JDSJ sv="20130904">2013-09-04</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>多多投资</LCYHJY>
+		</ROW>
+		<ROW>
+			<ID>9</ID>
+			<KHID>20130906000001</KHID>
+			<XM>我问问</XM>
+			<XB>呃呃</XB>
+			<CSNY sv="20130905">2013-09-05 00:00:00.0</CSNY>
+			<LXDH>鹅鹅鹅</LXDH>
+			<SFZHM>鹅鹅鹅</SFZHM>
+			<XJZD></XJZD>
+			<ZY></ZY>
+			<ZW></ZW>
+			<YSR></YSR>
+			<SXCP></SXCP>
+			<GRPH></GRPH>
+			<JRCPSYQK>102|203|302|403|</JRCPSYQK>
+			<JDSJ sv="20130906">2013-09-06</JDSJ>
+			<DEPID></DEPID>
+			<UNITID>5355AA00</UNITID>
+			<UNITNAME>莆田市邮政局</UNITNAME>
+			<GZRNAME>系统管理员</GZRNAME>
+			<GZR>system</GZR>
+			<LCYHJY>哦发任务热污染</LCYHJY>
+		</ROW>
+	</QUERYINFO>
+	<ERRORINFO>
+		<ERRORRESULT>00</ERRORRESULT>
+	</ERRORINFO>
+</EFSFRAME>

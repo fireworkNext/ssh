@@ -1,0 +1,96 @@
+package org.ptbank.bo;
+
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
+
+import org.ptbank.base.CommonQuery;
+import org.ptbank.base.NumAssign;
+import org.ptbank.base.Operation;
+import org.ptbank.base.QueryDoc;
+import org.ptbank.base.ReturnDoc;
+import org.ptbank.cache.DicCache;
+import org.ptbank.cache.SpellCache;
+import org.ptbank.cache.UserLogonInfo;
+import org.ptbank.db.DBConnection;
+import org.ptbank.db.DataStorage;
+import org.ptbank.db.SQLAnalyse;
+import org.ptbank.declare.Common;
+import org.ptbank.declare.Field;
+import org.ptbank.declare.Table;
+import org.ptbank.func.General;
+
+public class ZxkhBO {
+	//高端客户基础资料新增
+	public static String gdkhAdd(String strXML, UserLogonInfo userSession)
+			throws Exception {
+		//System.out.print(strXML);
+		DataStorage obj_Storage = new DataStorage();
+		ReturnDoc obj_ReturnDoc = new ReturnDoc();
+		String str_SQL = "";
+		try {
+			// 设置编号
+			String strId = NumAssign.assignID_B("990002", General.curYear4()
+					+ General.curMonth() + General.curDay());
+			Document doc = DocumentHelper.parseText(strXML);
+			Element ele1 = (Element) doc.selectSingleNode("//DATAINFO/T_GDKHXXB");
+			ele1.element("JDSJ").setText(
+					General.curYear4() + General.curMonth() + General.curDay());
+			ele1.element("KHID").setText(strId);
+			ele1.element("GZR").setText(userSession.getUserTitle());
+			ele1.element("GZRNAME").setText(userSession.getUserName());
+			ele1.element("UNITID").setText(userSession.getUnitID());
+			ele1.element("UNITNAME").setText(userSession.getUnitName());
+			str_SQL = SQLAnalyse.analyseXMLSQL(ele1);
+			System.out.print("the sql statment is:"+str_SQL);
+			obj_Storage.addSQL(str_SQL);
+			String str_Return = obj_Storage.runSQL();
+			if (!General.empty(str_Return)) {
+				obj_ReturnDoc.addErrorResult(Common.RT_FUNCERROR);
+				obj_ReturnDoc.setFuncErrorInfo(str_Return);
+			} else {
+				obj_ReturnDoc.addErrorResult(Common.RT_SUCCESS);
+			}
+
+		} catch (Exception e) {
+			obj_ReturnDoc.addErrorResult(Common.RT_FUNCERROR);
+			obj_ReturnDoc.setFuncErrorInfo(e.getMessage());
+		}
+		return obj_ReturnDoc.getXML();
+	}
+	
+	//高端客户列表查询
+		public static String getGdkhList(String strXML, UserLogonInfo userSession) throws Exception{
+			QueryDoc obj_Query = new QueryDoc(strXML);  
+			int int_PageSize = obj_Query.getIntPageSize();
+		    int int_CurrentPage = obj_Query.getIntCurrentPage();
+			String str_Select = "S.XM XM,S.XB XB,S.CSNY CSNY,S.LXDH LXDH,S.SFZHM SFZHM,S.XJZD XJZD,S.ZY ZY,S.ZW ZW,S.YSR YSR,S.SXCP SXCP,S.GRPH GRPH";
+			String str_From = "T_GDKHXXB s";
+			String cGZR = userSession.getUserTitle();
+			//String cDeptid = userSession.getDeptId();
+			// String str_Where = Common.WHERE + " GZR =userSession.getUserTitle()";    and DEPTID = '" + cDeptid + "'
+			String str_Where = Common.WHERE + " GZR = '" + cGZR + "' ";
+			
+
+			// System.out.println(str_Where);
+
+			// 日期型字段列表
+			//String[] str_DateList = { "TBSJ" };
+			// 标准的、统一的分页查询接口
+			return CommonQuery.basicListQuery(str_Select, str_From, str_Where,
+					"XSID", null, int_PageSize, int_CurrentPage);
+	}
+
+}

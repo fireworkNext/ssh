@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications xmlns="http://www.wabacus.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wabacus.com ../xsd/wabacus.applications.xsd">
+	<page id="listpage1">
+		<report id="report1" title="员工基本信息列表" pagesize="20" scrollstyle="image" scrollheight="300px" width="1000px" dataexport="richexcel">
+			<display>
+				<col column="{sequence:1}" label="序号" />
+				<col column="no" label="工号" clickorderby="true" valuestyleproperty="style='mso-number-format:\@'" />
+				<col column="name" label="姓名" clickorderby="true" />
+				<group label="基本信息">
+					<col column="sex" label="性别" />
+					<col column="age" label="年龄" clickorderby="true" filter="true" filterwidth="120px" />
+					<col column="birthday" label="出生日期" clickorderby="true" />
+				</group>
+				<col column="deptname" label="所属部门" filter="true" filterwidth="120px" />
+			</display>
+			<sql>
+				<value>
+					<![CDATA[SELECT no,name,sex,age,birthday,deptname FROM tbl_baseinfo A left join tbl_department B on A.deptno=B.deptno where {#condition#} order by no]]>
+				</value>
+				<condition name="txtno" label="工号">
+					<value>
+						<![CDATA[(no like  '%#data#%' )]]>
+					</value>
+				</condition>
+				<condition name="txtname" label="姓名">
+					<value>
+						<![CDATA[(name like  '%#data#%' )]]>
+					</value>
+				</condition>
+				<condition name="txtsex" label="性别">
+					<value>
+						<![CDATA[(sex =#data#)]]>
+					</value>
+					<inputbox type="selectbox">
+						<option value="" label="性别" />
+						<option value="1" label="男" />
+						<option value="0" label="女" />
+					</inputbox>
+				</condition>
+			</sql>
+			<format>
+				<value>
+					sex=sex==null?"1":sex.trim();
+					if(sex.equals("0")) sex="女";
+					else sex="男";
+					birthday=birthday==null?"":birthday.trim();
+					int idx=birthday.indexOf(" ");//判断是否有时间，有的话就去掉时间，只显示日期
+					if(idx>0) birthday=birthday.substring(0,idx);
+			  </value>
+			</format>
+		</report>
+	</page>
+	<page id="listpage2">
+		<report id="report2" type="editablelist2" title="人员信息列表" dataexport="richexcel">
+			<display>
+				<col column="id" label="序号" clickorderby="true" />
+				<col column="realname" label="真实姓名" clickorderby="true" />
+				<group label="基本信息">
+					<col column="sex" label="性别">
+						<inputbox type="selectbox">
+							<option value="1" label="男"></option>
+							<option value="2" label="女"></option>
+						</inputbox>
+					</col>
+					<col column="age" label="年龄" clickorderby="true" />
+					<col column="birthday" label="出生日期" clickorderby="true">
+						<inputbox type="datepicker"></inputbox>
+					</col>
+				</group>
+			</display>
+			<sql>
+				<select>
+					<value>
+						<![CDATA[select * from tbl_person where {#condition#} order by realname]]>
+					</value>
+					<condition name="searchRealName" label="真实姓名">
+						<value>
+							<![CDATA[(realname like  '%#data#%' )]]>
+						</value>
+					</condition>
+					<condition name="searchSex" label="性别">
+						<value>
+							<![CDATA[(sex = #data# )]]>
+						</value>
+						<inputbox type="radiobox">
+							<option value="1" label="男"></option>
+							<option value="2" label="女"></option>
+						</inputbox>
+					</condition>
+					<condition name="searchSex" label="性别">
+						<value>
+							<![CDATA[(birthday like '%#data#%' )]]>
+						</value>
+						<inputbox type="datepicker">
+						</inputbox>
+					</condition>
+				</select>
+				<insert>
+					insert into tbl_person(@{id},@{realname},@{age},@{birthday},@{sex});
+				</insert>
+				<update>
+					update tbl_person(realname=@{realname},age=@{age},birthday=@{birthday},sex=@{sex})
+					where id=@{id};
+				</update>
+				<delete>
+					delete from tbl_person where id=@{id};
+				</delete>
+			</sql>
+			<format>
+				<value>
+					sex=sex==null?"1":sex.trim();
+					if(sex.equals("2")) 
+						sex="女";
+					else 
+						sex="男";
+				</value>
+			</format>
+		</report>
+	</page>
+
+</applications>

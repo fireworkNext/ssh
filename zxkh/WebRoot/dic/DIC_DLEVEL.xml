@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="1" DIC_TEXT="一级部门" DIC_SPELL="yjbm" DIC_ASPELL="yijibumen"/>
+  <row DIC_CODE="2" DIC_TEXT="二级部门" DIC_SPELL="ejbm" DIC_ASPELL="erjibumen"/>
+</data>

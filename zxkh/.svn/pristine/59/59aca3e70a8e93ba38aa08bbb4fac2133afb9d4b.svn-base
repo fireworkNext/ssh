@@ -1,0 +1,289 @@
+<%@ page language="java" import="org.ptbank.cache.*" pageEncoding="UTF-8"%>
+<%@ include file="../../inc/head.inc.jsp"%>
+<%!
+/**
+	 '*******************************
+	 '** 程序名称：   extraAdd.jsp
+	 '** 实现功能：   高端客户附加信息新增
+	 '** 设计人员：   蔡剑成
+	 '** 设计日期：   2013-08-26
+	 '*******************************
+*/
+%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "java.text.DecimalFormat" %>
+<%@ page import = "java.net.URL"%>
+<%@ page language="java" import = "java.sql.*" %>
+<%@ page import = "java.io.*"%>
+<%@ page import = "org.ptbank.db.*,org.ptbank.func.*,org.ptbank.bo.*,org.ptbank.cache.*,com.alibaba.fastjson.JSON"%>
+<%
+UserLogonInfo userSession = (UserLogonInfo)request.getSession().getAttribute("user");
+
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<head>
+<base href="<%=webRoot%>">
+<title>高端客户附加信息新增</title>
+<link rel="stylesheet" type="text/css" href="css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="css/efs-all.css" />
+<script type="text/javascript" src="js/loadmask.js"></script>
+<script type="text/javascript" src="js/efs-all.js"></script>
+
+<SCRIPT language="JavaScript">
+
+function doQry()
+{
+	if(!Efs.getExt("frmQry").isValid())
+		//alert("请选择条件后再进行查询!");
+    	return false;
+    //var txt =Efs.Common.getQryXml(Efs.getExt("frmQry"));
+	//Efs.getDom("xsStore").txtXML = Efs.Common.getQryXml(Efs.getExt("frmQry"));
+	//alert("test");
+	alert("当前程序的根路径是:"+"<%=rootPath%>");
+	//alert(txtXML);
+	Efs.getDom("xsStore").url="<%=rootPath%>/zxkh_getGdkhList.action";
+	alert(Efs.getDom("xsStore").url);
+    Efs.getExt("xsGrid").store.load();
+}
+
+/*function ToEt()
+{
+	var elTable = document.getElementById("xsGrid"); //xsGrid 为导出数据所在的表格ID；
+	var oRangeRef = document.body.createTextRange();
+	oRangeRef.moveToElementText(elTable);
+	oRangeRef.execCommand("Copy");
+	try{
+		var appEt = new  ActiveXObject("ET.Application");
+		}catch(e)
+		{
+		  alert("无法调用ET对象，请确保您的机器已安装了WPS办公软件并已将本系统的站点名加入到IE的信任站点列表中！");
+		  return;
+		}
+	appEt.Visible = true;
+	appEt.Workbooks.Add().Worksheets.Item(1).Paste();
+	appEt = null;
+}*/
+//跳出家庭情况新增窗口
+function onAddJt(){
+	Efs.getExt("win1").show();
+}
+//跳出资产结构新增窗口
+function onAddZc(){
+	Efs.getExt("win2").show();
+}
+//跳出历史成交记录新增窗口
+function onAddLscj(){
+	Efs.getExt("win3").show();
+}
+</SCRIPT>
+</head>
+<body>
+	<div iconCls="icon-panel" region="north" height="103" title="高端客户查询" border="false" buttonAlign="center" autoScroll="true">
+	<form id="frmQry" method="post" url="" onEfsSuccess="frmPostSubBack(true)" onEfsFailure="frmPostSubBack(false)">
+		<TABLE class="formAreaTop" cellpadding="10" cellspacing="10">
+	      <tr>
+	        <td>起始时间</td>
+	        <td><input type="text"  must=true class="Edit" kind="date" fieldname="TO_CHAR(TBSJ,'YYYYMMDD')" operation="&gt;="></td>
+	        <td>结束时间</td>
+	        <td><input type="text" must=true class="Edit" kind="date" fieldname="TO_CHAR(TBSJ,'YYYYMMDD')" operation="&lt;="></td>
+	      </tr>
+	      <tr>
+	        <td>客户姓名</td>
+	        <td><input type="text" kind="text" fieldname="NAME" operation="like"></td>
+	        <td>客户电话</td>
+	        <td><input type="text" kind="text" fieldname="DH" operation="like"></td>
+	        <td>身份证</td>
+	        <td><input type="text" kind="text" fieldname="SFZ" operation="like"></td>
+    	    <td><input iconCls="icon-qry" type="button" value="查  询" onEfsClick="doQry()"></td>
+	      </tr>
+		</TABLE>
+	</form>
+	</div>
+	
+	<div id="xsGrid" region="center" border="flase" xtype="grid" iconCls="icon-panel"  pagingBar="true" pageSize="20">
+	   <div xtype="tbar">
+		  <span class="Title">高端客户资料列表</span>
+		  <div text="->"></div>
+		  <div iconCls="icon-add" id="cmdAdd" text="家庭情况新增#A" onEfsClick="onAddJt()"></div>
+		  <div iconCls="icon-add" id="cmdAdd" text="资产结构新增#A" onEfsClick="onAddZc()"></div>
+		  <div iconCls="icon-add" id="cmdAdd" text="新增成交记录#A" onEfsClick="onAddLscj()"></div>
+	   </div>
+	   <div id="xsStore" xtype="store" txtXML="" autoLoad="false">
+			<div xtype="xmlreader" fieldid="KHID" record="ROW" tabName="T_GDKHXXB">
+					<div name="XM"></div>
+					<div name="XB"></div>
+					<div name="CSNY"></div>
+					<div name="SFZHM"></div>
+					<div name="LXDH"></div>
+					<div name="ZY"></div>
+					<div name="ZW"></div>
+					<div name="YSR"></div>
+					<div name="SXCP"></div>
+					<div name="GRPH"></div>
+					<div name="XJZD"></div>
+			</div>
+		</div>
+		<div xtype="colmodel">
+			<div header="客户姓名" width="80" sortable="true"  align="center" dataIndex="XM"></div>
+			<div header="性 别" width="120" sortable="true"  align="center" dataIndex="XB"  align="center"></div>
+			<div header="出生年月" width="120" sortable="true" align="center" dataIndex="CSNY"></div>
+			<div header="身份证号码" width="120" sortable="true" align="center" dataIndex="SFZHM"></div>
+			<div header="联系电话" width="120" sortable="true"  align="center" dataIndex="LXDH"></div>
+			<div header="职业" width="120" sortable="true" align="center" dataIndex="ZY"></div>
+			<div header="职务" width="120" sortable="true" align="center" dataIndex="ZW"></div>
+			<div header="月收入" width="120" sortable="true" align="center" dataIndex="YSR"></div>
+			<div header="适销产品" width="120" sortable="true" align="center" dataIndex="SXCP"></div>
+			<div header="个人偏好" width="120" sortable="true" align="center"	dataIndex="GRPH"></div>
+			<div header="现居住地" width="300" sortable="true" align="center" dataIndex="XJZD"></div>
+		</div>
+	</div>
+	<!-- 家庭情况window开始 -->
+	<div iconCls="icon-panel" id="win1" xtype="window" width="800" height="400" title="家庭情况编辑窗口" resizable="true" modal="true">
+	  <div region="north" xtype="panel" title="" border="false" height="103" autoScroll="true">
+	    <div xtype="tbar">
+	      <div text="->"></div>
+	      <div iconCls="icon-add" id="cmdUser" text="确定新增" onEfsClick="doOk()"></div>
+	    </div>
+	    <form id="frmData" class="efs-box" method="post" url="<%=rootPath%>/gzcx_dealWithXml.action" onEfsSuccess="frmPostSubBack(true)" onEfsFailure="frmPostSubBack(false)">
+	    <TABLE>
+	      <tr>
+	      	<td class="label">关系</td>
+	        <td><input type="text" id="dbfld" name="dbfld" class="Edit" kind="text" fieldname="T_JTQK/GX" must="true" state="0" datatype="0" onEfsBlur="toUpper();"></td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	        <td class="label">姓名</td>
+	        <td><input type="text" id="fldname" name="fldname" class="Edit" kind="text" fieldname="T_JTQK/XM" must="true" state="0" datatype="0"></td>
+	         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	        <td class="label">描述</td>
+	         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	        <td><input type="text" class="Edit" fieldname="T_JTQK/MS" must="true" state="0" datatype="0"></td>
+	        <td class="label">爱好</td>
+	         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	        <td><input type="text" id="fldname" name="fldname" class="Edit" kind="text" fieldname="T_JTQK/AH" must="true" state="0" datatype="0"></td>
+	      </tr>
+	      <tr>
+	      	<td class="label">备注</td>
+	        <td><input type="text" id="fldname" name="fldname" class="Edit" kind="text" fieldname="T_JTQK/BZ" must="true" state="0" datatype="0"></td>
+	      </tr>
+	    </TABLE>
+	   		 <input type="hidden" id="pid" name="pid" kind="text" fieldname="T_DBFLD/PID" operation="0" writeevent="0" state="0" datatype="0">
+	    </form>
+	  </div>
+	  <!-- 家庭情况Grid -->
+	  <div id="xsGrid1"  region="center" border="flase" xtype="grid" iconCls="icon-panel"  pagingBar="true" pageSize="20">
+	   <div id="xsStore1" xtype="store" txtXML="" autoLoad="false">
+			<div xtype="xmlreader" fieldid="KHID" record="ROW" tabName="T_JTQK">
+					<div name="GX"></div>
+					<div name="XM"></div>
+					<div name="MS"></div>
+					<div name="AH"></div>
+					<div name="BZ"></div>
+			</div>
+		</div>
+		<div xtype="colmodel">
+			<div header="关系" width="80" sortable="true"  align="center" dataIndex="GX"></div>
+			<div header="姓名" width="120" sortable="true"  align="center" dataIndex="XM"  align="center"></div>
+			<div header="描述" width="120" sortable="true" align="center" dataIndex="MS"></div>
+			<div header="爱好" width="120" sortable="true" align="center" dataIndex="AH"></div>
+			<div header="备注" width="120" sortable="true"  align="center" dataIndex="BZ"></div>
+		</div>
+	</div>
+	</div>
+<!-- 家庭情况window结束 -->
+
+
+<!-- 资产结构window开始 -->
+	<div iconCls="icon-panel" id="win2" xtype="window" width="800" height="400" title="资产结构编辑窗口" resizable="true" modal="true">
+	  <div region="north" xtype="panel" title="" border="false" height="103" autoScroll="true">
+		    <div xtype="tbar">
+		       <div text="->"></div>
+		       <div iconCls="icon-add" id="cmdUser" text="确定新增" onEfsClick="doOk()"></div>
+		    </div>
+		    <form id="frmData" class="efs-box" method="post" url="<%=rootPath%>/gzcx_dealWithXml.action" onEfsSuccess="frmPostSubBack(true)" onEfsFailure="frmPostSubBack(false)">
+			    <TABLE>
+			      <tr>
+			      	<td class="label">资产类别</td>
+			        <td><input type="text" id="dbfld" name="dbfld" class="Edit" kind="text" fieldname="T_ZCJG/ZCLB" must="true" state="0" datatype="0" onEfsBlur="toUpper();"></td>
+			        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td class="label">实际占比</td>
+			        <td><input type="text" id="fldname" name="fldname" class="Edit" kind="text" fieldname="T_ZCJG/SJZB" must="true" state="0" datatype="0"></td>
+			         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td class="label">建议占比</td>
+			         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td><input type="text" class="Edit" fieldname="T_ZCJG/JYZB" must="true" state="0" datatype="0"></td>
+			      </tr>
+			    </TABLE>
+		    </form>
+	  </div>
+	  <!--资产结构Grid -->
+	  <div id="xsGrid2"  region="center" border="flase" xtype="grid" iconCls="icon-panel"  pagingBar="true" pageSize="20">
+	   <div id="xsStore2" xtype="store" txtXML="" autoLoad="false">
+			<div xtype="xmlreader" fieldid="KHID" record="ROW" tabName="T_ZCJG">
+					<div name="zclb"></div>
+					<div name="sjzb"></div>
+					<div name="jyzb"></div>
+			</div>
+		</div>
+		<div xtype="colmodel">
+			<div header="资产类别" width="80" sortable="true"  align="center" dataIndex="zclb"></div>
+			<div header="实际占比" width="120" sortable="true"  align="center" dataIndex="sjzb"  align="center"></div>
+			<div header="建议占比" width="120" sortable="true" align="center" dataIndex="jyzb"></div>
+		</div>
+	</div>
+	</div>
+<!-- 资产结构window结束 -->
+
+<!-- 历史成交记录window开始 -->
+	<div iconCls="icon-panel" id="win3" xtype="window" width="830" height="500" title="历史成交记录编辑窗口" resizable="true" modal="true">
+	  <div region="north" xtype="panel" title="" border="false" height="104" autoScroll="true">
+		    <div xtype="tbar">
+		       <div text="->"></div>
+		       <div iconCls="icon-add" id="cmdUser" text="确定新增" onEfsClick="doOk()"></div>
+		    </div>
+		    <form id="frmData" class="efs-box" method="post" url="<%=rootPath%>/gzcx_dealWithXml.action" onEfsSuccess="frmPostSubBack(true)" onEfsFailure="frmPostSubBack(false)">
+			    <TABLE>
+			      <tr>
+			      	<td class="label">购买日期</td>
+			        <td><input type="data" id="dbfld" name="dbfld" class="Edit" kind="text" fieldname="T_LSCJJL/GMRQ" must="true" state="0" datatype="0" onEfsBlur="toUpper();"></td>
+			        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td class="label">产品</td>
+			        <td><input type="text" id="fldname" name="fldname" class="Edit" kind="text" fieldname="T_LSCJJL/CP" must="true" state="0" datatype="0"></td>
+			         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td class="label">积分</td>
+			         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td><input type="text" class="Edit" fieldname="T_LSCJJL/JF" must="true" state="0" datatype="0"></td>
+			         <td class="label">到期日期</td>
+			         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			        <td><input type="data" class="Edit" fieldname="T_LSCJJL/DQRQ" must="true" state="0" datatype="0"></td>
+			        </tr>
+			        <tr>
+			         <td class="label">备注说明</td>
+			       	 <td ><input colspan=5 type="text" class="Edit" fieldname="T_LSCJJL/BZSM" must="true" state="0" datatype="0"></td>
+			        </tr>
+			    </TABLE>
+		    </form>
+	  </div>
+	  <!--成交记录Grid -->
+	  <div id="xsGrid3"  region="center" border="flase" xtype="grid" iconCls="icon-panel"  pagingBar="true" pageSize="20">
+		   <div id="xsStore3" xtype="store" txtXML="" autoLoad="false">
+				<div xtype="xmlreader" fieldid="KHID" record="ROW" tabName="T_LSCJJL">
+						<div name="gmrq"></div>
+						<div name="cp"></div>
+						<div name="jf"></div>
+						<div name="dqrq"></div>
+						<div name="bzsm"></div>
+				</div>
+			</div>
+			<div xtype="colmodel">
+				<div header="购买日期" width="80" sortable="true"  align="center" dataIndex="gmrq"></div>
+				<div header="产品" width="120" sortable="true"  align="center" dataIndex="cp"  align="center"></div>
+				<div header="积分" width="120" sortable="true" align="center" dataIndex="jf"></div>
+				<div header="到期日期" width="120" sortable="true" align="center" dataIndex="dqrq"></div>
+				<div header="备注说明" width="120" sortable="true" align="center" dataIndex="bzsm"></div>
+			</div>
+	  </div>
+	</div>
+<!--历史成交记录window结束 -->
+</body>
+</html>
+

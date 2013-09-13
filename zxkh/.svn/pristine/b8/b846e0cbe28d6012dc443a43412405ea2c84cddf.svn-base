@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="wagedetailtpl" DIC_TEXT="工资发放明细模版" DIC_SPELL="gzffmxmb" DIC_ASPELL="gongzifafangmingximoban"/>
+  <row DIC_CODE="wagetottpl" DIC_TEXT="工资汇总模版" DIC_SPELL="gzhzmb" DIC_ASPELL="gongzihuizongmoban"/>
+  <row DIC_CODE="prizedetailtpl" DIC_TEXT="月奖发放明细模版" DIC_SPELL="yjffmxmb" DIC_ASPELL="yuejiangfafangmingximoban"/>
+  <row DIC_CODE="prizetottpl" DIC_TEXT="月奖汇总模版" DIC_SPELL="yjhzmb" DIC_ASPELL="yuejianghuizongmoban"/>
+  <row DIC_CODE="yeardetailtpl" DIC_TEXT="年终奖发放明细模版" DIC_SPELL="nzjffmxmb" DIC_ASPELL="nianzhongjiangfafangmingximoban"/>
+  <row DIC_CODE="yeartottpl" DIC_TEXT="年终奖汇总模版" DIC_SPELL="nzjhzmb" DIC_ASPELL="nianzhongjianghuizongmoban"/>
+  <row DIC_CODE="otherdetailtpl" DIC_TEXT="其他发放明细模版" DIC_SPELL="qtffmxmb" DIC_ASPELL="qitafafangmingximoban"/>
+  <row DIC_CODE="othertottpl" DIC_TEXT="其他汇总模版" DIC_SPELL="qthzmb" DIC_ASPELL="qitahuizongmoban"/>
+  <row DIC_CODE="salarytottpl" DIC_TEXT="薪酬合计汇总模版" DIC_SPELL="xchjhzmb" DIC_ASPELL="xinchouhejihuizongmoban"/>
+</data>

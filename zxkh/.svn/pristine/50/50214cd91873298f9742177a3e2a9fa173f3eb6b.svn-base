@@ -1,0 +1,90 @@
+<DATAINFO>
+	<T_GDKHXXB operation="0">
+		<XM datatype="0" state="0">22</XM>
+		<XB datatype="0" state="0">22</XB>
+		<CSNY sv="2013-09-04" datatype="3" state="0">20130904</CSNY>
+		<SFZHM datatype="0" state="0">2222</SFZHM>
+		<LXDH datatype="0" state="0">222</LXDH>
+		<ZY datatype="0" state="0">22</ZY>
+		<ZW datatype="0" state="0">22</ZW>
+		<YSR datatype="0" state="0">22</YSR>
+		<SXCP datatype="0" state="0">22</SXCP>
+		<GRPH datatype="0" state="0">22</GRPH>
+		<XJZD datatype="0" state="0">222</XJZD>
+		<GZRNAME datatype="0" state="0" />
+		<UNITID datatype="0" state="0" />
+		<UNITNAME datatype="0" state="0" />
+		<KHID datatype="0" state="0" />
+		<JDSJ datatype="3" state="0" />
+		<JRCPSYQK datatype="0" state="0">101|302|401|</JRCPSYQK>
+	</T_GDKHXXB>
+</DATAINFO>
+
+
+<DATAINFO>
+	<T_GDKHXXB operation="0">
+		<XM datatype="0" state="0">22</XM>
+		<XB datatype="0" state="0">22</XB>
+		<CSNY sv="2013-09-04" datatype="3" state="0">20130904</CSNY>
+		<SFZHM datatype="0" state="0">2222</SFZHM>
+		<LXDH datatype="0" state="0">222</LXDH>
+		<ZY datatype="0" state="0">22</ZY>
+		<ZW datatype="0" state="0">22</ZW>
+		<YSR datatype="0" state="0">22</YSR>
+		<SXCP datatype="0" state="0">22</SXCP>
+		<GRPH datatype="0" state="0">22</GRPH>
+		<XJZD datatype="0" state="0">222</XJZD>
+		<GZRNAME datatype="0" state="0" />
+		<UNITID datatype="0" state="0" />
+		<UNITNAME datatype="0" state="0" />
+		<KHID datatype="0" state="0" />
+		<JDSJ datatype="3" state="0" />
+		<JRCPSYQK datatype="0" state="0">101|302|401|101|302|401|
+		</JRCPSYQK>
+	</T_GDKHXXB>
+</DATAINFO>
+
+
+<DATAINFO>
+	<T_GDKHXXB operation="0">
+		<XM datatype="0" state="0">ss</XM>
+		<XB datatype="0" state="0">ww</XB>
+		<CSNY sv="2013-09-19" datatype="3" state="0">20130919</CSNY>
+		<SFZHM datatype="0" state="0">ww</SFZHM>
+		<LXDH datatype="0" state="0">w</LXDH>
+		<ZY datatype="0" state="0">w</ZY>
+		<ZW datatype="0" state="0">w</ZW>
+		<YSR datatype="0" state="0">w</YSR>
+		<SXCP datatype="0" state="0">w</SXCP>
+		<GRPH datatype="0" state="0">w</GRPH>
+		<XJZD datatype="0" state="0">w</XJZD>
+		<GZRNAME datatype="0" state="0" />
+		<UNITID datatype="0" state="0" />
+		<UNITNAME datatype="0" state="0" />
+		<KHID datatype="0" state="0" />
+		<JDSJ datatype="3" state="0" />
+		<JRCPSYQK datatype="0" state="0">101|302|401|</JRCPSYQK>
+	</T_GDKHXXB>
+</DATAINFO>
+<DATAINFO>
+	<T_GDKHXXB operation="0">
+		<XM datatype="0" state="0">22</XM>
+		<XB datatype="0" state="0">22</XB>
+		<CSNY sv="2013-09-11" datatype="3" state="0">20130911</CSNY>
+		<SFZHM datatype="0" state="0">222</SFZHM>
+		<LXDH datatype="0" state="0">2</LXDH>
+		<ZY datatype="0" state="0">33</ZY>
+		<ZW datatype="0" state="0">33</ZW>
+		<YSR datatype="0" state="0">333</YSR>
+		<SXCP datatype="0" state="0">3</SXCP>
+		<GRPH datatype="0" state="0">2</GRPH>
+		<XJZD datatype="0" state="0">33</XJZD>
+		<GZRNAME datatype="0" state="0" />
+		<UNITID datatype="0" state="0" />
+		<UNITNAME datatype="0" state="0" />
+		<KHID datatype="0" state="0" />
+		<JDSJ datatype="3" state="0" />
+		<JRCPSYQK datatype="0" state="0">101|302|401|</JRCPSYQK>
+		<LCYHJY datatype="0" state="0">[object]</LCYHJY>
+	</T_GDKHXXB>
+</DATAINFO>

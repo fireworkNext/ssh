@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="公共系统" DIC_SPELL="ggxt" DIC_ASPELL="gonggongxitong"/>
+  <row DIC_CODE="03" DIC_TEXT="工资查询系统" DIC_SPELL="gzcxxt" DIC_ASPELL="gongzichaxunxitong"/>
+  <row DIC_CODE="04" DIC_TEXT="简易险销售管理系统" DIC_SPELL="jyxxsglxt" DIC_ASPELL="jianyixianxiaoshouguanlixitong"/>
+  <row DIC_CODE="99" DIC_TEXT="测试系统" DIC_SPELL="csxt" DIC_ASPELL="ceshixitong"/>
+</data>

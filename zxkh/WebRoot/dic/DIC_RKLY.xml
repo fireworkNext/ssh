@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="集团公司下发" DIC_SPELL="jtgsxf" DIC_ASPELL="jituangongsixiafa"/>
+  <row DIC_CODE="02" DIC_TEXT="省公司下发" DIC_SPELL="sgsxf" DIC_ASPELL="shenggongsixiafa"/>
+  <row DIC_CODE="03" DIC_TEXT="地市局自购" DIC_SPELL="dsjzg" DIC_ASPELL="dishijuzigou"/>
+</data>

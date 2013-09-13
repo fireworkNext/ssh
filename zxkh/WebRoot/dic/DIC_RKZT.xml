@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="待审核" DIC_SPELL="dsh" DIC_ASPELL="daishenhe"/>
+  <row DIC_CODE="02" DIC_TEXT="审核不通过" DIC_SPELL="shbtg" DIC_ASPELL="shenhebutongguo"/>
+  <row DIC_CODE="03" DIC_TEXT="审核通过" DIC_SPELL="shtg" DIC_ASPELL="shenhetongguo"/>
+</data>

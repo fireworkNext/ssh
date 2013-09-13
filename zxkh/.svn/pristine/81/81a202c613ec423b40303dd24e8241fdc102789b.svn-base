@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="主设备" DIC_SPELL="zsb" DIC_ASPELL="zhushebei"/>
+  <row DIC_CODE="02" DIC_TEXT="子设备" DIC_SPELL="zsb" DIC_ASPELL="zishebei"/>
+</data>

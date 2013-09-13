@@ -1,0 +1,47 @@
+<EFSFRAME>
+	<QUERYCONDITION currentpagenum="1" recordsperpage="20">
+		<PREDICATE></PREDICATE>
+		<CONDITIONS>
+			<TYPE>and</TYPE>
+			<CONDITIONS>
+				<TYPE>and</TYPE>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-02-14">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&gt;=</OPERATION>
+					<VALUE>20130214</VALUE>
+				</CONDITION>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-09-27">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&lt;=</OPERATION>
+					<VALUE>20130927</VALUE>
+				</CONDITION>
+			</CONDITIONS>
+		</CONDITIONS>
+	</QUERYCONDITION>
+</EFSFRAME>
+
+
+
+
+<?xml version="1.0"?>
+<EFSFRAME>
+	<QUERYCONDITION currentpagenum="1" recordsperpage="20">
+		<PREDICATE></PREDICATE>
+		<CONDITIONS>
+			<TYPE>and</TYPE>
+			<CONDITIONS>
+				<TYPE>and</TYPE>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-02-14">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&gt;=</OPERATION>
+					<VALUE>20130214</VALUE>
+				</CONDITION>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-09-27">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&lt;=</OPERATION>
+					<VALUE>20130927</VALUE>
+				</CONDITION>
+			</CONDITIONS>
+		</CONDITIONS>
+	</QUERYCONDITION>
+</EFSFRAME>

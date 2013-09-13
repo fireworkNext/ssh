@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="0" DIC_TEXT="不参与计算" DIC_SPELL="bcyjs" DIC_ASPELL="bucanyujisuan"/>
+  <row DIC_CODE="1" DIC_TEXT="应发" DIC_SPELL="yf" DIC_ASPELL="yingfa"/>
+  <row DIC_CODE="2" DIC_TEXT="应扣" DIC_SPELL="yk" DIC_ASPELL="yingkou"/>
+</data>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="险种1" DIC_SPELL="xz1" DIC_ASPELL="xianzhong1"/>
+  <row DIC_CODE="02" DIC_TEXT="险种2" DIC_SPELL="xz2" DIC_ASPELL="xianzhong2"/>
+  <row DIC_CODE="03" DIC_TEXT="险种3" DIC_SPELL="xz3" DIC_ASPELL="xianzhong3"/>
+</data>

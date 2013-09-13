@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<EFSFRAME>
+	<QUERYCONDITION currentpagenum="1" recordsperpage="20">
+		<PREDICATE></PREDICATE>
+		<CONDITIONS>
+			<TYPE>and</TYPE>
+			<CONDITIONS>
+				<TYPE>and</TYPE>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-08-04">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&gt;=</OPERATION>
+					<VALUE>20130804</VALUE>
+				</CONDITION>
+				<CONDITION alias="" datatype="0">
+					<FIELDNAME sv="2013-09-04">TO_CHAR(TBSJ,'YYYYMMDD')</FIELDNAME>
+					<OPERATION>&lt;=</OPERATION>
+					<VALUE>20130904</VALUE>
+				</CONDITION>
+			</CONDITIONS>
+		</CONDITIONS>
+	</QUERYCONDITION>
+</EFSFRAME>

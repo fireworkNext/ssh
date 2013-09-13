@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="do,action"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.multipart.saveDir" value="upload" />
+	<constant name="struts.multipart.maxSize" value="20000000" />
+	<package name="org.ptbank.action" extends="struts-default">
+		<global-results>
+			<result name="goSuHint">/hint.jsp</result>
+			<result name="goErHint">/hint_error.jsp</result>
+		</global-results>
+
+		<!-- 简易险管理 -->
+		<action name="jyx_*" class="org.ptbank.action.JyxAction"
+			method="{1}">
+		</action>
+		<!-- 转型客户管理系统 -->
+		<action name="zxkh_*" class="org.ptbank.action.ZxkhAction"
+			method="{1}">
+		</action>
+		<!-- 系统登录 -->
+		<action name="login" class="org.ptbank.action.IdentifyAction"
+			method="login">
+			<result name="modpasswd">/gzcx/modpasswd.jsp</result>
+			<result name="success">/main.jsp</result>
+			<result name="failed">/hint_error.jsp</result>
+		</action>
+
+		<action name="download" class="org.ptbank.action.DownloadAction">
+			<param name="directory">D:/tmp/</param>
+			<result name="success" type="stream">
+				<!-- 指定下载文件的内容类型，text/plain是默认类型 -->
+				<param name="contentType">text/plain</param>
+				<!-- inputName默认值是inputStream，如果action中用于读取下载文件内容的属性名是inputStream，那么可以省略这个参数 -->
+				<param name="inputName">inputStream</param>
+				<!--动态获取文件名，从Action中的取得filename -->
+				<param name="contentDisposition">
+					attachment;filename="${filename}"
+				</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="input">/hint_error.jsp</result>
+		</action>
+
+		<!-- action基类 <action name="*" class="org.ptbank.action.BaseAction" method="{1}"> 
+			<result name="success">/default.jsp</result> </action> -->
+		<!-- 统一处理Identify中的action -->
+		<action name="*" class="org.ptbank.action.IdentifyAction" method="{1}">
+		</action>
+	</package>
+</struts>

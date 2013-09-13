@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="001" DIC_TEXT="在用" DIC_SPELL="zy" DIC_ASPELL="zaiyong"/>
+  <row DIC_CODE="002" DIC_TEXT="备用" DIC_SPELL="by" DIC_ASPELL="beiyong"/>
+  <row DIC_CODE="003" DIC_TEXT="停用" DIC_SPELL="ty" DIC_ASPELL="tingyong"/>
+  <row DIC_CODE="004" DIC_TEXT="维修" DIC_SPELL="wx" DIC_ASPELL="weixiu"/>
+  <row DIC_CODE="005" DIC_TEXT="待报废" DIC_SPELL="dbf" DIC_ASPELL="daibaofei"/>
+  <row DIC_CODE="006" DIC_TEXT="报废" DIC_SPELL="bf" DIC_ASPELL="baofei"/>
+</data>

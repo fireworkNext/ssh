@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="0" DIC_TEXT="默认" DIC_SPELL="mr" DIC_ASPELL="moren"/>
+  <row DIC_CODE="000100" DIC_TEXT="开发配置" DIC_SPELL="kfpz" DIC_ASPELL="kaifapeizhi"/>
+  <row DIC_CODE="000200" DIC_TEXT="系统管理" DIC_SPELL="xtgl" DIC_ASPELL="xitongguanli"/>
+  <row DIC_CODE="030100" DIC_TEXT="工资信息" DIC_SPELL="gzxx" DIC_ASPELL="gongzixinxi"/>
+  <row DIC_CODE="030200" DIC_TEXT="月奖信息" DIC_SPELL="yjxx" DIC_ASPELL="yuejiangxinxi"/>
+  <row DIC_CODE="030300" DIC_TEXT="年终奖信息" DIC_SPELL="nzjxx" DIC_ASPELL="nianzhongjiangxinxi"/>
+  <row DIC_CODE="030400" DIC_TEXT="其他信息" DIC_SPELL="qtxx" DIC_ASPELL="qitaxinxi"/>
+  <row DIC_CODE="030500" DIC_TEXT="薪酬合计信息" DIC_SPELL="xchjxx" DIC_ASPELL="xinchouhejixinxi"/>
+  <row DIC_CODE="030600" DIC_TEXT="系统维护" DIC_SPELL="xtwh" DIC_ASPELL="xitongweihu"/>
+  <row DIC_CODE="040100" DIC_TEXT="简易险销售" DIC_SPELL="jyxxs" DIC_ASPELL="jianyixianxiaoshou"/>
+</data>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="001" DIC_TEXT="操作系统" DIC_SPELL="czxt" DIC_ASPELL="caozuoxitong"/>
+  <row DIC_CODE="002" DIC_TEXT="数据库" DIC_SPELL="sjk" DIC_ASPELL="shujuku"/>
+  <row DIC_CODE="003" DIC_TEXT="中间件" DIC_SPELL="zjj" DIC_ASPELL="zhongjianjian"/>
+  <row DIC_CODE="004" DIC_TEXT="IP地址" DIC_SPELL="ipdz" DIC_ASPELL="ipdizhi"/>
+  <row DIC_CODE="005" DIC_TEXT="MAC地址" DIC_SPELL="macdz" DIC_ASPELL="macdizhi"/>
+  <row DIC_CODE="006" DIC_TEXT="是否上网" DIC_SPELL="sfsw" DIC_ASPELL="shifoushangwang"/>
+  <row DIC_CODE="007" DIC_TEXT="所属业务种类" DIC_SPELL="ssywzl" DIC_ASPELL="suoshuyewuzhonglei"/>
+  <row DIC_CODE="008" DIC_TEXT="租赁起始时间" DIC_SPELL="zlqssj" DIC_ASPELL="zulinqishishijian"/>
+  <row DIC_CODE="009" DIC_TEXT="租赁结束时间" DIC_SPELL="zljssj" DIC_ASPELL="zulinjieshushijian"/>
+  <row DIC_CODE="010" DIC_TEXT="租赁年限" DIC_SPELL="zlnx" DIC_ASPELL="zulinnianxian"/>
+  <row DIC_CODE="011" DIC_TEXT="设备使用人" DIC_SPELL="sbsyr" DIC_ASPELL="shebeishiyongren"/>
+  <row DIC_CODE="012" DIC_TEXT="设备责任人" DIC_SPELL="sbzrr" DIC_ASPELL="shebeizerenren"/>
+</data>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="01" DIC_TEXT="机关部门" DIC_SPELL="jgbm" DIC_ASPELL="jiguanbumen"/>
+  <row DIC_CODE="02" DIC_TEXT="生产部门" DIC_SPELL="scbm" DIC_ASPELL="shengchanbumen"/>
+  <row DIC_CODE="03" DIC_TEXT="技术部门" DIC_SPELL="jsbm" DIC_ASPELL="jishubumen"/>
+  <row DIC_CODE="04" DIC_TEXT="专业部门" DIC_SPELL="zybm" DIC_ASPELL="zhuanyebumen"/>
+</data>

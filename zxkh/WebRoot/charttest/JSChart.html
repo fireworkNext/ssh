@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>多图形</title>
+		<script language="JavaScript" src="../charts/FusionCharts.js"></script>
+	</head>
+	<body bgcolor="#ffffff">
+		<div id="chartdiv1" align="center">First Chart Container Pie 3D</div>
+		<script type="text/javascript">
+			var myChart = new FusionCharts("../charts/FCF_Pie3D.swf","myChartId1","600","500");
+			myChart.setDataURL("Data.xml");
+			myChart.render("chartdiv1");
+		</script>
+		
+		<div id="chartdiv2" align="center">Second Chart Container Column 3D</div>
+		<script type="text/javascript">
+			var myChart = new FusionCharts("../charts/FCF_Column3D.swf","myChartId2","600","500");
+			myChart.setDataURL("Data.xml");
+			myChart.render("chartdiv2");
+		</script>
+		
+		<div id="chartdiv3" align="center">Third Chart Container Line 2D</div>
+		<script type="text/javascript">
+			var myChart = new FusionCharts("../charts/FCF_Line.swf","myChartId3","600","500");
+			myChart.setDataURL("Data.xml");
+			myChart.render("chartdiv3");
+		</script>
+		
+		<div id="chartdiv4" align="center">Third Chart Container Area 2D</div>
+		<script type="text/javascript">
+			var myChart = new FusionCharts("../charts/FCF_Area2D.swf","myChartId4","600","500");
+			myChart.setDataURL("Data.xml");
+			myChart.render("chartdiv4");
+		</script>
+	</body>
+</html>

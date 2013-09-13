@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="000001" DIC_TEXT="市场部" DIC_SPELL="scb" DIC_ASPELL="shichangbu"/>
+  <row DIC_CODE="000002" DIC_TEXT="测试部门" DIC_SPELL="csbm" DIC_ASPELL="ceshibumen"/>
+</data>

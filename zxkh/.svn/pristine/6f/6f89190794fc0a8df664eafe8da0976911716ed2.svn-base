@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="SELECT" DIC_TEXT="查询" DIC_SPELL="cx" DIC_ASPELL="chaxun"/>
+  <row DIC_CODE="UPDATE" DIC_TEXT="更新" DIC_SPELL="gx" DIC_ASPELL="gengxin"/>
+</data>

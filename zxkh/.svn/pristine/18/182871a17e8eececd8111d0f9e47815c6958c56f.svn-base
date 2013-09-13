@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="0" DIC_TEXT="不导入" DIC_SPELL="bdr" DIC_ASPELL="budaoru"/>
+  <row DIC_CODE="1" DIC_TEXT="导入" DIC_SPELL="dr" DIC_ASPELL="daoru"/>
+</data>

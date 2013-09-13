@@ -1,0 +1,50 @@
+package org.ptbank.action;
+import java.io.PrintWriter;
+
+import org.ptbank.bo.JyxBO;
+import org.ptbank.bo.ZxkhBO;
+import org.ptbank.cache.UserLogonInfo;
+
+public class ZxkhAction extends BaseAction{
+
+	/**
+	 * 转型客户Action
+	 */
+	private static final long serialVersionUID = -7571292481903032348L;
+	//高端客户基本资料新增
+	public void gdkhAdd(){
+		try {
+			response.setContentType("text/xml;charset=utf-8");
+			request.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			String strRet = request.getParameter("txtXML");
+			UserLogonInfo userSession = (UserLogonInfo) request.getSession().getAttribute("user");
+			String strRetXml = ZxkhBO.gdkhAdd(strRet, userSession);
+			out.write(strRetXml);
+			out.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	//高端客户列表查询
+	public void  getGdkhList(){
+		try {	   
+			response.setContentType("text/xml;charset=utf-8");
+			request.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			String strRet = request.getParameter("txtXML");
+			UserLogonInfo userSession = (UserLogonInfo) request.getSession().getAttribute("user");
+			String strRetXml = ZxkhBO.getGdkhList(strRet, userSession);
+			//System.out.print(strRetXml);
+			out.write(strRetXml);
+			out.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

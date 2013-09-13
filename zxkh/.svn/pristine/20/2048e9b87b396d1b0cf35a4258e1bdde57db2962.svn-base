@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="0" DIC_TEXT="集团公司" DIC_SPELL="jtgs" DIC_ASPELL="jituangongsi"/>
+  <row DIC_CODE="3" DIC_TEXT="省公司" DIC_SPELL="sgs" DIC_ASPELL="shenggongsi"/>
+  <row DIC_CODE="4" DIC_TEXT="地市局" DIC_SPELL="dsj" DIC_ASPELL="dishiju"/>
+  <row DIC_CODE="5" DIC_TEXT="县分局、专业局" DIC_SPELL="xfj/zyj" DIC_ASPELL="xianfenju/zhuanyeju"/>
+  <row DIC_CODE="6" DIC_TEXT="网点" DIC_SPELL="wd" DIC_ASPELL="wangdian"/>
+</data>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <row DIC_CODE="001" DIC_TEXT="自行购买" DIC_SPELL="zxgm" DIC_ASPELL="zixinggoumai"/>
+  <row DIC_CODE="002" DIC_TEXT="外单位调入" DIC_SPELL="wdwdr" DIC_ASPELL="waidanweidiaoru"/>
+  <row DIC_CODE="003" DIC_TEXT="市局统购" DIC_SPELL="sjtg" DIC_ASPELL="shijutonggou"/>
+  <row DIC_CODE="004" DIC_TEXT="省局统购" DIC_SPELL="sjtg" DIC_ASPELL="shengjutonggou"/>
+  <row DIC_CODE="005" DIC_TEXT="国家局统购" DIC_SPELL="gjjtg" DIC_ASPELL="guojiajutonggou"/>
+  <row DIC_CODE="006" DIC_TEXT="租赁" DIC_SPELL="zl" DIC_ASPELL="zulin"/>
+  <row DIC_CODE="007" DIC_TEXT="赠送" DIC_SPELL="zs" DIC_ASPELL="zengsong"/>
+</data>
